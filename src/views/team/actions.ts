@@ -57,9 +57,9 @@ export function fetchTeamError(): IFetchTeamErrorAction {
 
 
 /**
- * Fetch team
+ * Fetches team details
  * @param  {String}   teamId Id of a particular team
- * @return {Promise}
+ * @return {Function}
  */
 export function fetchTeam(teamId: string): ThunkAction<
   Promise<[{ data: ITeam }, { data: IUser[] }]>,
