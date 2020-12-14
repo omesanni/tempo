@@ -2,11 +2,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/tasks/setUpTests.ts'],
   testURL: 'http://testing',
   testMatch: ['<rootDir>/src/**/__tests__/**/!(constants|types).{ts,tsx}'],
-  collectCoverageFrom: [
-    '!src/*.{js,ts,tsx}',
-    '!src/store/*.ts',
-    'src/**/!(constants|types).{ts,tsx}',
-  ],
+  collectCoverageFrom: ['!src/*.{ts,tsx}', '!src/store/*.ts', 'src/**/!(constants|types).{ts,tsx}'],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },

@@ -101,6 +101,6 @@ describe('Team', () => {
     userEvent.type(container.querySelector('.form-control'), 'wwww');
 
     expect(container.querySelectorAll('.card').length).toBeFalsy();
-    expect(getByText(/no results/i)).toBeInTheDocument();
+    expect(getByText(/no members found/i)).toBeInTheDocument();
   });
 });
