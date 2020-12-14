@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { ThunkAction } from 'redux-thunk';
 import { Dispatch, AnyAction } from 'redux';
+import { IUser } from '../shared/user/types';
 import { USERS_API, TEAMS_API } from '../shared/constants';
 import { fetchUserName } from '../shared/user/actions';
 import {
@@ -57,9 +58,15 @@ export function fetchTeamError(): IFetchTeamErrorAction {
 
 /**
  * Fetch team
+ * @param  {String}   teamId Id of a particular team
  * @return {Promise}
  */
-export function fetchTeam(teamId: string): ThunkAction<void, {}, {}, AnyAction> {
+export function fetchTeam(teamId: string): ThunkAction<
+  Promise<[{ data: ITeam }, { data: IUser[] }]>,
+  void,
+  void,
+  AnyAction
+> {
   return (dispatch: Dispatch) => {
     dispatch(fetchTeamStart());
 

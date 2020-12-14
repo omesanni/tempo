@@ -47,7 +47,7 @@ export function fetchTeamsError(): IFetchTeamsErrorAction {
  * Fetch all teams
  * @return {Promise}
  */
-export function fetchTeams(): ThunkAction<void, {}, {}, AnyAction>  {
+export function fetchTeams(): ThunkAction<Promise<ITeam[]>, void, void, AnyAction> {
   return (dispatch: Dispatch) => {
     dispatch(fetchTeamsStart());
 
