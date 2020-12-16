@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface NoResultsProps {
+interface INoResultsProps {
   message: string;
 }
 
-const NoResults = ({ message }: NoResultsProps) => (
+const NoResults = ({ message }: INoResultsProps) => (
   <div className="mt-4 text-center">
     <h5>{message}</h5>
   </div>

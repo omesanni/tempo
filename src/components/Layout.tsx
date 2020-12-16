@@ -2,13 +2,13 @@ import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeftIcon } from '@primer/octicons-react';
 
-interface LayoutProps  { 
+interface ILayoutProps  { 
   title: string;
   showBackIcon?: boolean; 
   children: React.ReactNode;
 }
 
-const Layout: FunctionComponent<LayoutProps> = ({ title, children, showBackIcon }) => (
+const Layout: FunctionComponent<ILayoutProps> = ({ title, children, showBackIcon }) => (
   <div className="content">
     <div className="content__top pl-4 pr-4 pt-3 pb-3">
       {showBackIcon && (

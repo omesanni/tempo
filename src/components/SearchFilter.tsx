@@ -1,12 +1,12 @@
 import React, { ChangeEvent } from 'react';
 
-interface SearchFilterProps  {
+interface ISearchFilterProps  {
   value: string;
   placeholder: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const SearchFilter = ({ value, onChange, placeholder }: SearchFilterProps) => (
+const SearchFilter = ({ value, onChange, placeholder }: ISearchFilterProps) => (
   <input
     type="search"
     value={value}
